@@ -11,6 +11,7 @@ app.use(
     extended: true,
   })
 );
+
 app.use(express.json());
 
 app.use(express.static("public"));
@@ -26,6 +27,7 @@ app.get("/", (req, res) => {
 app.use((req, res, next) => {
   res.status(404).sendFile(`${basePath}/404.html`);
 });
+
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
 });
