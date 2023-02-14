@@ -18,6 +18,10 @@ app.get("/users/add", (req, res) => {
 
 app.post("/users/save", (req, res) => {
   console.log(req.body);
+
+  const { name, age } = req.body;
+
+  console.log(`O nome do usuário é ${name} e ele tem ${age} anos`);
 });
 
 app.get("/users/:id", (req, res) => {
