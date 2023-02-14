@@ -11,6 +11,7 @@ app.get("/users/:id", (req, res) => {
 
   //leitura da tabela users, resgatar um usuário do banco de dados
   console.log(`Estamos buscando pelo usuário: ${id}`);
+
   res.sendFile(`${basePath}/users.html`);
 });
 
